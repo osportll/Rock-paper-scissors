@@ -1,45 +1,159 @@
-/* 1. Make the function randomly return "rock", "paper" or "scissors":
 
-- Make the user input a value
+/* 
+- Create a  function (computerPlay()) that randomly returns a string from an array
 
-- Make that value be a string and be just three options: "rock", "paper" or "scissors"
+- This is gonna be the computers "input" for the game. The user is going to play again the computer.
 
--These three options should be 3 separate variables
+ - Create a function (playRound()" that accepts two arguments: the player's input and the returned value from the computerPlay() function 
 
--The input should be case insensitive. Any input that the user enters should be converted to lowercase.
+- Compare the input the user entered to the computerPlay() returned value
 
-- Check if the user's input was either of the three options
+- Check what input the player entered and make it case insensitive
 
-- If the user's input was any of the options (answer = true), return a string as a reply to the user's input.
+-The function should declare the player as winner or loser depending on this comparisson (e.g. "Rock beats Scissors! You lose.")
 
-- That reply should randomly be one of the three strings "rock", "paper" or "scissors".
+-Create another function (game()) that allows to play a 5 rounds game. The function should be able to save the score and declare a winner when the score reaches 5.
+
+-The function should know who is the winner of each round and accumulate a score for that player.
+
+-The loop should not end until one of the two player's score reaches 5.
 
 */
 
+let items = ["Rock", "Paper", "Scissors"];
 
-let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!");
+function computerPlay() {
+
+    let item = items[Math.floor(Math.random()*items.length)];
+
+    console.log("Computer's choice = " + item);
+
+    return item;
+
+}
+
+
+function answer() {
+
+    let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!");
+    console.log("Player's choice = " + answer);
+    return answer;
+    
+}
+
+
+/* let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!"); */
+
+let win = "Win!";
+let lose = "Lose!";
+let tie = "Tie!"
+
+function playRound(playerSelection, computerSelection) {
+
+let computer = computerPlay();
+playerSelection = answer();
+computerSelection = computer;
 
 let input1 = "Rock";
 let input2 = "Paper";
 let input3 = "Scissors";
 
+if(playerSelection.toLowerCase() === input1.toLowerCase()) {
 
-function computerPlay() {
+    if (computerSelection.toLowerCase() === input2.toLowerCase()) {
 
-    let items = ["Rock", "Paper", "Scissors"];
+        /* return alert("Paper beats Rock! You lose!"); */
+        return lose;
 
-    let item = items[Math.floor(Math.random()*items.length)]
+    } else if (computerSelection.toLowerCase() === input3.toLowerCase()) {
 
-    console.log(item)
+        /* return alert("Rock beats Scissors! You win!"); */
+        return win;
+
+    } else return tie;
+
+
+}else if (playerSelection.toLowerCase() === input2.toLowerCase()) {
+
+    if (computerSelection.toLowerCase() === input1.toLowerCase()) {
+
+        /* return alert("Paper beats Rock! You win!"); */
+         return win;
+
+    } else if (computerSelection.toLowerCase() === input3.toLowerCase()) {
+
+       /*  return alert("Scissors beat Paper! You Lose!"); */
+       return lose;
+
+    } else return tie;
+
+
+} else if (playerSelection.toLowerCase() === input3.toLowerCase()) {
+
+    if (computerSelection.toLowerCase() === input1.toLowerCase()) {
+
+        /* return alert("Rock beats Scissors! You lose!"); */
+        return lose;
+
+    } else if (computerSelection.toLowerCase() === input2.toLowerCase()) {
+
+        /* return alert("Scissors beat Paper! You win!"); */
+         return win;
+
+    } else return tie;
+
+
+}}
 
 
 
-    if (answer.toLowerCase() === input1.toLowerCase() || answer.toLowerCase() === input2.toLowerCase() || answer.toLowerCase() === input3.toLowerCase()) {
-        return alert(item);
-        
+
+function game() {
+
+    let scorePlayer = 0;
+    let scoreComputer = 0;
+
+    
+
+while (scoreComputer <= 2 || scorePlayer <= 2) {
+
+    let round = playRound();
+    let roundResult = round;
+
+    console.log("Round result = " + roundResult);
+
+    if (roundResult === win) {
+        scorePlayer++;
+        alert("You scored 1 point! Go again...");
+        /* playRound(); */
+        console.log("Player = " + scorePlayer, "Computer = " + scoreComputer);
+    } else if (roundResult === lose) {
+        scoreComputer++;
+        alert("You lost! :( Try again!");
+        console.log("Player = " + scorePlayer, "Computer = " + scoreComputer);
+        /* playRound(); */
+    } else if (roundResult === tie) {
+         alert("It's a tie! Try again!")
+         console.log("Player = " + scorePlayer, "Computer = " + scoreComputer);
+         /* playRound(); */
     }
+}
+
+
+if (scorePlayer === 5) {
+    alert("You won the game!");
+} else if (scoreComputer === 5) {
+    alert("Game over! You lost :(");
+}
+
+console.log("Player = " + scorePlayer);
+console.log("Computer = " + scoreComputer);
 
 
 }
 
-computerPlay();
+game();
+
+
+
+
