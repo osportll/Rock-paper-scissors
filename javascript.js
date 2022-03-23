@@ -106,16 +106,13 @@ if(playerSelection.toLowerCase() === input1.toLowerCase()) {
 }}
 
 
-
-
 function game() {
 
     let scorePlayer = 0;
     let scoreComputer = 0;
 
-    
 
-while (scoreComputer <= 2 || scorePlayer <= 2) {
+    while (scoreComputer <= 5 || scorePlayer <= 5) {
 
     let round = playRound();
     let roundResult = round;
@@ -137,18 +134,21 @@ while (scoreComputer <= 2 || scorePlayer <= 2) {
          console.log("Player = " + scorePlayer, "Computer = " + scoreComputer);
          /* playRound(); */
     }
-}
 
+    if (scorePlayer === 5) {
+        alert("You won the game!");
+    } else if (scoreComputer === 5) {
+        alert("Game over! You lost :(");
+    }
 
-if (scorePlayer === 5) {
-    alert("You won the game!");
-} else if (scoreComputer === 5) {
-    alert("Game over! You lost :(");
+    if (scorePlayer === 5 || scoreComputer === 5) {
+        break;
+    }
+
 }
 
 console.log("Player = " + scorePlayer);
 console.log("Computer = " + scoreComputer);
-
 
 }
 
