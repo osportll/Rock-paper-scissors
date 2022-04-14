@@ -1,25 +1,3 @@
-
-/* 
-- Create a  function (computerPlay()) that randomly returns a string from an array
-
-- This is gonna be the computers "input" for the game. The user is going to play again the computer.
-
- - Create a function (playRound()" that accepts two arguments: the player's input and the returned value from the computerPlay() function 
-
-- Compare the input the user entered to the computerPlay() returned value
-
-- Check what input the player entered and make it case insensitive
-
--The function should declare the player as winner or loser depending on this comparisson (e.g. "Rock beats Scissors! You lose.")
-
--Create another function (game()) that allows to play a 5 rounds game. The function should be able to save the score and declare a winner when the score reaches 5.
-
--The function should know who is the winner of each round and accumulate a score for that player.
-
--The loop should not end until one of the two player's score reaches 5.
-
-*/
-
 let items = ["Rock", "Paper", "Scissors"];
 
 function computerPlay() {
@@ -101,8 +79,6 @@ if(playerSelection.toLowerCase() === input1.toLowerCase()) {
          return win;
 
     } else return tie;
-
-
 }}
 
 
