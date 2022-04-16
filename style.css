@@ -1,0 +1,195 @@
+/* * {
+  outline: 1px solid red;
+} */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+  color: #33332d;
+}
+
+.heading-1 {
+  font-family: "Press Start 2P", cursive;
+  letter-spacing: 10px;
+}
+
+.hands-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aliceblue; */
+  /* height: 10em; */
+}
+
+.main {
+  /* background-color: antiquewhite; */
+  /* margin-top: 30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hands {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  /* margin-top: 50px; */
+}
+
+.icon {
+  border-radius: 15px;
+  box-shadow: 5px 6px 10px rgb(155, 155, 155);
+}
+
+/* .button:hover {
+  border: solid 3px #290620;
+  background-color: #00f7ff;
+  box-shadow: 5px 6px 10px #538a65;
+}
+
+.button:active {
+  background-color: #06b7fd;
+  border: solid 3px #150430;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button {
+  border: solid 3px #33332d;
+  //border-radius: 15px; 
+  background-color: #ffffff;
+  font-size: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  outline: none;
+  color: #33332d;
+} */
+
+.scissors:hover {
+  border: solid 3px #290620;
+  background-color: #aeffda;
+  box-shadow: 5px 6px 10px #689983;
+}
+
+.scissors:active {
+  background-color: #82d2f7;
+  border: solid 3px #150430;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.paper:hover {
+  border: solid 3px #290620;
+  background-color: #f7f382;
+  box-shadow: 5px 6px 10px #969456;
+}
+
+.paper:active {
+  background-color: #d4fcb5;
+  border: solid 3px #150430;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.rock:hover {
+  border: solid 3px #290620;
+  background-color: #eb8755;
+  box-shadow: 5px 6px 10px #ad7255;
+}
+
+.rock:active {
+  background-color: #eeac5d;
+  border: solid 3px #150430;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button {
+  border: solid 3px #33332d;
+  /* border-radius: 15px; */
+  background-color: #ffffff;
+  font-size: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  outline: none;
+  color: #33332d;
+}
+
+.rock {
+  padding: 50px 60px 50px 60px;
+}
+
+.paper,
+.scissors {
+  padding: 23px 50px 23px 50px;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  /* margin-top: 50px; */
+  /* background-color: aquamarine; */
+  font-family: "Press Start 2P", cursive;
+  font-size: 30px;
+  color: #33332d;
+}
+
+.points-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #33332d;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 24em;
+  width: 50em;
+  padding-bottom: 20px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.player-point {
+  margin-left: 40px;
+}
+
+/* .computer-point {
+  margin-right: 80px;
+}
+ */
+.points {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  width: 20em;
+  font-family: "Press Start 2P", cursive;
+  font-size: 30px;
+}
+
+.selection {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 5px;
+  color: #33332d;
+}
