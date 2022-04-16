@@ -11,16 +11,28 @@ function computerPlay() {
 }
 
 
-function answer() {
+const btns = document.querySelectorAll('.button');
 
-    let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!");
-    console.log("Player's choice = " + answer);
-    return answer;
-    
+console.log(btns);
+
+function clickSelection(e) {
+    console.log(this.classList.value)
+
+
 }
 
+btns.forEach(btn => btn.addEventListener('click', clickSelection));
 
-/* let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!"); */
+
+
+/* function answer() {
+
+    let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!");
+    console.log("Player's choice = " + btn);
+} */
+
+
+// let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!");
 
 let win = "Win!";
 let lose = "Lose!";
@@ -29,23 +41,23 @@ let tie = "Tie!"
 function playRound(playerSelection, computerSelection) {
 
 let computer = computerPlay();
-playerSelection = answer();
+playerSelection = clickSelection;
 computerSelection = computer;
 
-let input1 = "Rock";
-let input2 = "Paper";
-let input3 = "Scissors";
+let input1 = "rock";
+let input2 = "paper";
+let input3 = "scissors";
 
 if(playerSelection.toLowerCase() === input1.toLowerCase()) {
 
     if (computerSelection.toLowerCase() === input2.toLowerCase()) {
 
-        /* return alert("Paper beats Rock! You lose!"); */
+        // return alert("Paper beats Rock! You lose!"); 
         return lose;
 
     } else if (computerSelection.toLowerCase() === input3.toLowerCase()) {
 
-        /* return alert("Rock beats Scissors! You win!"); */
+        // return alert("Rock beats Scissors! You win!");
         return win;
 
     } else return tie;
@@ -55,12 +67,12 @@ if(playerSelection.toLowerCase() === input1.toLowerCase()) {
 
     if (computerSelection.toLowerCase() === input1.toLowerCase()) {
 
-        /* return alert("Paper beats Rock! You win!"); */
+        // return alert("Paper beats Rock! You win!");
          return win;
 
     } else if (computerSelection.toLowerCase() === input3.toLowerCase()) {
 
-       /*  return alert("Scissors beat Paper! You Lose!"); */
+    //  return alert("Scissors beat Paper! You Lose!");
        return lose;
 
     } else return tie;
@@ -70,12 +82,12 @@ if(playerSelection.toLowerCase() === input1.toLowerCase()) {
 
     if (computerSelection.toLowerCase() === input1.toLowerCase()) {
 
-        /* return alert("Rock beats Scissors! You lose!"); */
+        // return alert("Rock beats Scissors! You lose!");
         return lose;
 
     } else if (computerSelection.toLowerCase() === input2.toLowerCase()) {
 
-        /* return alert("Scissors beat Paper! You win!"); */
+        // return alert("Scissors beat Paper! You win!");
          return win;
 
     } else return tie;
@@ -98,17 +110,17 @@ function game() {
     if (roundResult === win) {
         scorePlayer++;
         alert("You scored 1 point! Go again...");
-        /* playRound(); */
+        // playRound();
         console.log("Player = " + scorePlayer, "Computer = " + scoreComputer);
     } else if (roundResult === lose) {
         scoreComputer++;
         alert("You lost! :( Try again!");
         console.log("Player = " + scorePlayer, "Computer = " + scoreComputer);
-        /* playRound(); */
+        // playRound();
     } else if (roundResult === tie) {
          alert("It's a tie! Try again!")
          console.log("Player = " + scorePlayer, "Computer = " + scoreComputer);
-         /* playRound(); */
+        //  playRound();
     }
 
     if (scorePlayer === 5) {
