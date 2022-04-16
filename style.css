@@ -25,13 +25,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: aliceblue; */
-  /* height: 10em; */
 }
 
 .main {
-  /* background-color: antiquewhite; */
-  /* margin-top: 30px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,38 +38,12 @@ body {
   justify-content: center;
   gap: 100px;
   align-items: center;
-  /* margin-top: 50px; */
 }
 
 .icon {
   border-radius: 15px;
   box-shadow: 5px 6px 10px rgb(155, 155, 155);
 }
-
-/* .button:hover {
-  border: solid 3px #290620;
-  background-color: #00f7ff;
-  box-shadow: 5px 6px 10px #538a65;
-}
-
-.button:active {
-  background-color: #06b7fd;
-  border: solid 3px #150430;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.button {
-  border: solid 3px #33332d;
-  //border-radius: 15px; 
-  background-color: #ffffff;
-  font-size: 100px;
-  text-decoration: none;
-  cursor: pointer;
-  transition-duration: 0.2s;
-  outline: none;
-  color: #33332d;
-} */
 
 .scissors:hover {
   border: solid 3px #290620;
@@ -116,7 +86,6 @@ body {
 
 .button {
   border: solid 3px #33332d;
-  /* border-radius: 15px; */
   background-color: #ffffff;
   font-size: 100px;
   text-decoration: none;
@@ -142,8 +111,6 @@ body {
 }
 
 .score {
-  /* margin-top: 50px; */
-  /* background-color: aquamarine; */
   font-family: "Press Start 2P", cursive;
   font-size: 30px;
   color: #33332d;
@@ -171,12 +138,7 @@ body {
   margin-left: 40px;
 }
 
-/* .computer-point {
-  margin-right: 80px;
-}
- */
 .points {
-  /* background-color: aqua; */
   display: flex;
   justify-content: space-between;
   width: 20em;
