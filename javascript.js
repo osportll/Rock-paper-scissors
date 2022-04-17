@@ -1,4 +1,4 @@
-let items = ["Rock", "Paper", "Scissors"];
+let items = ["rock", "paper", "scissors"];
 
 function computerPlay() {
 
@@ -7,55 +7,41 @@ function computerPlay() {
     console.log("Computer's choice = " + item);
 
     return item;
-
 }
 
 
-const btns = document.querySelectorAll('.button');
+const btns = document.querySelectorAll('#button');
 
-console.log(btns);
-
-function clickSelection(e) {
-    console.log(this.classList.value)
-
-
-}
-
-btns.forEach(btn => btn.addEventListener('click', clickSelection));
-
-
-
-/* function answer() {
-
-    let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!");
-    console.log("Player's choice = " + btn);
-} */
-
-
-// let answer = prompt("Let's play Rock Paper Scissors! Input one of the three!");
 
 let win = "Win!";
 let lose = "Lose!";
-let tie = "Tie!"
+let tie = "Tie!";
 
-function playRound(playerSelection, computerSelection) {
+function playRound(e, playerSelection, computerSelection) {
 
-let computer = computerPlay();
-playerSelection = clickSelection;
-computerSelection = computer;
+    let select = this.classList.value;
+
+    console.log(" Player's selection = " + select);
+
+//let computer = computerPlay();
+playerSelection = select;
+console.log(playerSelection);
+
+computerSelection = computerPlay();
+console.log(computerSelection);
 
 let input1 = "rock";
 let input2 = "paper";
 let input3 = "scissors";
 
-if(playerSelection.toLowerCase() === input1.toLowerCase()) {
+if(playerSelection === input1) {
 
-    if (computerSelection.toLowerCase() === input2.toLowerCase()) {
+    if (computerSelection === input2) {
 
         // return alert("Paper beats Rock! You lose!"); 
         return lose;
 
-    } else if (computerSelection.toLowerCase() === input3.toLowerCase()) {
+    } else if (computerSelection === input3) {
 
         // return alert("Rock beats Scissors! You win!");
         return win;
@@ -63,14 +49,14 @@ if(playerSelection.toLowerCase() === input1.toLowerCase()) {
     } else return tie;
 
 
-}else if (playerSelection.toLowerCase() === input2.toLowerCase()) {
+}else if (playerSelection === input2) {
 
-    if (computerSelection.toLowerCase() === input1.toLowerCase()) {
+    if (computerSelection === input1) {
 
         // return alert("Paper beats Rock! You win!");
          return win;
 
-    } else if (computerSelection.toLowerCase() === input3.toLowerCase()) {
+    } else if (computerSelection === input3) {
 
     //  return alert("Scissors beat Paper! You Lose!");
        return lose;
@@ -78,14 +64,14 @@ if(playerSelection.toLowerCase() === input1.toLowerCase()) {
     } else return tie;
 
 
-} else if (playerSelection.toLowerCase() === input3.toLowerCase()) {
+} else if (playerSelection === input3) {
 
-    if (computerSelection.toLowerCase() === input1.toLowerCase()) {
+    if (computerSelection === input1) {
 
         // return alert("Rock beats Scissors! You lose!");
         return lose;
 
-    } else if (computerSelection.toLowerCase() === input2.toLowerCase()) {
+    } else if (computerSelection === input2) {
 
         // return alert("Scissors beat Paper! You win!");
          return win;
@@ -94,7 +80,10 @@ if(playerSelection.toLowerCase() === input1.toLowerCase()) {
 }}
 
 
-function game() {
+btns.forEach(btn => btn.addEventListener('click', playRound));
+
+
+/* function game() {
 
     let scorePlayer = 0;
     let scoreComputer = 0;
@@ -140,7 +129,7 @@ console.log("Computer = " + scoreComputer);
 
 }
 
-game();
+game(); */
 
 
 

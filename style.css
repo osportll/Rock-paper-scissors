@@ -84,7 +84,9 @@ body {
   transform: translateY(4px);
 }
 
-.button {
+.rock,
+.paper,
+.scissors {
   border: solid 3px #33332d;
   background-color: #ffffff;
   font-size: 100px;
