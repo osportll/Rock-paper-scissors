@@ -150,10 +150,86 @@ body {
 
 .selection {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 200;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 5px;
   color: #33332d;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(65, 65, 65);
+  background-color: rgba(75, 75, 75, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  border: 5px solid black;
+  margin: 20% auto;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 21px;
+  text-align: center;
+  color: #33332d;
+  width: 50%;
+  padding: 30px;
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* .close {
+  float: right;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -25px;
+  margin-right: -15px;
+}
+
+.close:hover {
+  color: rgb(110, 64, 64);
+  cursor: pointer;
+  text-decoration: none;
+} */
+
+.play-again {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  background-color: black;
+  border: black solid 3px;
+  padding: 7px;
+}
+
+.play-again:hover {
+  background-color: rgb(41, 41, 41);
+  cursor: pointer;
+}
+
+.play-again:active {
+  background-color: black;
+}
+
+.modal-text {
+  margin-bottom: 35px;
 }
