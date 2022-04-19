@@ -58,20 +58,15 @@ if(playerSelection === input1) {
     if (computerSelection === input2) {
         // return alert("Paper beats Rock! You lose!"); 
         result = lose; 
-        /* rock_card.style.cssText = 'background-color: red';
-        paper_card.style.cssText = 'background-color: green'; */
         selection_text.textContent = "Paper beats Rock! You lose. Try again!";
 
     } else if (computerSelection === input3) {
         // return alert("Rock beats Scissors! You win!");
         result = win; 
-        /* rock_card.style.cssText = 'background-color: green';
-        scissors_card.style.cssText = 'background-color: red'; */
         selection_text.textContent = "Rock beats Scissors! You win!"
 
     } else {
         result = tie
-        /* rock_card.style.cssText = 'background-color: gray'; */
         selection_text.textContent = "It's a tie! Keep trying...";
         
     }
@@ -82,20 +77,15 @@ if(playerSelection === input1) {
     if (computerSelection === input1) {
         // return alert("Paper beats Rock! You win!");
         result = win;
-        /* paper_card.style.cssText = 'background-color: green';
-        rock_card.style.cssText = 'background-color: red'; */
         selection_text.textContent = "Paper beats Rock! You win!";
         
     } else if (computerSelection === input3) {
     //  return alert("Scissors beat Paper! You Lose!");
-        /* paper_card.style.cssText = 'background-color: red';
-        scissors_card.style.cssText = 'background-color: green'; */
         result = lose;
         selection_text.textContent = "Scissors beat Paper! You Lose. Try again!";
         
     } else {
         result = tie;
-        /* paper_card.style.cssText = 'background-color: gray'; */
         selection_text.textContent = "It's a tie! Keep trying...";
         
     }
@@ -106,20 +96,15 @@ if(playerSelection === input1) {
     if (computerSelection === input1) {
         // return alert("Rock beats Scissors! You lose!");
         result = lose;
-        /* rock_card.style.cssText = 'background-color: green';
-        scissors_card.style.cssText = 'background-color: red'; */
         selection_text.textContent = "Rock beats Scissors! You lose. Try again!";
         
     } else if (computerSelection === input2) {
         // return alert("Scissors beat Paper! You win!");
         result = win;
-        /* paper_card.style.cssText = 'background-color: red';
-        scissors_card.style.cssText = 'background-color: green'; */
         selection_text.textContent = "Scissors beat Paper! You win!";
         
     } else {
         result = tie; 
-        /* scissors_card.style.cssText = 'background-color: gray'; */
         selection_text.textContent = "It's a tie! Keep trying..."
     }}
 
