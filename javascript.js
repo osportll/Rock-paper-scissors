@@ -21,6 +21,9 @@ const label_computer = document.querySelector('.computer-point');
 const scissors_card = document.querySelector('.scissors');
 const rock_card = document.querySelector('.rock');
 const paper_card = document.querySelector('.paper');
+const current_left = document.querySelector('#current-left');
+const current_right = document.querySelector('#current-right');
+const current_selection = document.querySelector('.current-selection');
 
 console.log(rock_card, paper_card, scissors_card);
 
@@ -59,15 +62,27 @@ if(playerSelection === input1) {
         // return alert("Paper beats Rock! You lose!"); 
         result = lose; 
         selection_text.textContent = "Paper beats Rock! You lose. Try again!";
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9994 );
+        current_right.textContent = String.fromCodePoint( 9995 );
 
     } else if (computerSelection === input3) {
         // return alert("Rock beats Scissors! You win!");
         result = win; 
         selection_text.textContent = "Rock beats Scissors! You win!"
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9994 );
+        current_right.textContent = String.fromCodePoint( 9996 );
 
     } else {
         result = tie
         selection_text.textContent = "It's a tie! Keep trying...";
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9994 );
+        current_right.textContent = String.fromCodePoint( 9994 );
         
     }
 
@@ -146,6 +161,17 @@ if (scorePlayer === 5 || scoreComputer === 5) {
 showModal();
 
 };
+
+/* btns.forEach(btn => btn.addEventListener('click', showCurrent));
+
+function showCurrent(e, selection) {
+
+    selection = e.target.className;
+    
+    if (selection === "rock") {
+        current_left.textContent = ""
+    }
+} */
 
 
 /* ----------------------MODAL-------------------- */
