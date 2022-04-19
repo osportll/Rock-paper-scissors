@@ -7,7 +7,7 @@ function computerPlay() {
     /* console.log("Computer's choice = " + item); */
 
     return item;
-}
+};
 
 
 const btns = document.querySelectorAll('#button');
@@ -146,7 +146,6 @@ if (scorePlayer === 5 || scoreComputer === 5) {
 showModal();
 
 };
-/*  */
 
 
 /* ----------------------MODAL-------------------- */
@@ -184,7 +183,7 @@ play_again.addEventListener('click', () => {
 
 })
 
-}
+};
 
 
 
