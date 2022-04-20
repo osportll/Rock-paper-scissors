@@ -111,12 +111,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 185px;
+  gap: 170px;
 }
 
 .current-selection {
   display: none;
-  font-size: 70px;
+  font-size: 80px;
 }
 
 .score {

@@ -93,15 +93,27 @@ if(playerSelection === input1) {
         // return alert("Paper beats Rock! You win!");
         result = win;
         selection_text.textContent = "Paper beats Rock! You win!";
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9995 );
+        current_right.textContent = String.fromCodePoint( 9994 );
         
     } else if (computerSelection === input3) {
     //  return alert("Scissors beat Paper! You Lose!");
         result = lose;
         selection_text.textContent = "Scissors beat Paper! You Lose. Try again!";
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9995 );
+        current_right.textContent = String.fromCodePoint( 9996 );
         
     } else {
         result = tie;
         selection_text.textContent = "It's a tie! Keep trying...";
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9995 );
+        current_right.textContent = String.fromCodePoint( 9995 );
         
     }
 
@@ -112,15 +124,27 @@ if(playerSelection === input1) {
         // return alert("Rock beats Scissors! You lose!");
         result = lose;
         selection_text.textContent = "Rock beats Scissors! You lose. Try again!";
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9996 );
+        current_right.textContent = String.fromCodePoint( 9994 );
         
     } else if (computerSelection === input2) {
         // return alert("Scissors beat Paper! You win!");
         result = win;
         selection_text.textContent = "Scissors beat Paper! You win!";
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9996 );
+        current_right.textContent = String.fromCodePoint( 9995 );
         
     } else {
         result = tie; 
         selection_text.textContent = "It's a tie! Keep trying..."
+        current_left.style.display = "block";
+        current_right.style.display = "block";
+        current_left.textContent = String.fromCodePoint( 9996 );
+        current_right.textContent = String.fromCodePoint( 9996 );
     }}
 
     console.log(result);
@@ -203,6 +227,8 @@ play_again.addEventListener('click', () => {
     player_points.style.color = '#33332d';
     label_computer.style.color = '#33332d';
     label_player.style.color = '#33332d';
+    current_left.style.display = "none";
+    current_right.style.display = "none";
 
     computer_points.textContent = scoreComputer;
     player_points.textContent = scorePlayer;
